@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "84014173-0ab4-4ab1-b59a-7f29d1f4ea4f",
+		"name": "Sistem_sekolah_Inosoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28340355"
+	},
+	"item": [
+		{
+			"name": "Kelas",
+			"item": [
+				{
+					"name": "Get Data Detail Kelas (List Siswa jika Berhubungan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/kelas"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Data Kelas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "qn13aP0kugcotNZYa3zF1XjA4LAgZKOTt2KCuNeI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_kelas",
+									"value": "Kelas B",
+									"type": "text"
+								},
+								{
+									"key": "keterangan",
+									"value": "Kelas Orang Biasa",
+									"type": "text"
+								},
+								{
+									"key": "pembimbing",
+									"value": "Bapak Parjo",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/kelas"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Data Kelas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "qn13aP0kugcotNZYa3zF1XjA4LAgZKOTt2KCuNeI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_kelas",
+									"value": "Kelas A Ubah 123",
+									"type": "text"
+								},
+								{
+									"key": "keterangan",
+									"value": "Kelas Orang Pintar Ubah",
+									"type": "text"
+								},
+								{
+									"key": "pembimbing",
+									"value": "Ibu Wardiyah",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/kelas/64d9c18b6975361a6c0d8a7c?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"kelas",
+								"64d9c18b6975361a6c0d8a7c"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data Kelas",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "qn13aP0kugcotNZYa3zF1XjA4LAgZKOTt2KCuNeI",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/kelas/64d9bd836975361a6c0d8a75"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data List Kelas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/datakelas"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Siswa",
+			"item": [
+				{
+					"name": "Get Data Detail Siswa (List Nilai Jika Ada)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/siswa"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Data SIswa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "VBee0MqRaSHLfPZuWH4qbQqFAhHDCFc1I82Jdw37",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_kelas",
+									"value": "Kelas C",
+									"type": "text"
+								},
+								{
+									"key": "nama_siswa",
+									"value": "Mahendra Dirgantara",
+									"type": "text"
+								},
+								{
+									"key": "jenis_kelamin",
+									"value": "L",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Bandung 22",
+									"type": "text"
+								},
+								{
+									"key": "nama_orangtua",
+									"value": "Moh. Sukmali",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/siswa"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data List Siswa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/datasiswa"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Data Siswa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "VBee0MqRaSHLfPZuWH4qbQqFAhHDCFc1I82Jdw37",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_kelas",
+									"value": "Kelas C",
+									"type": "text"
+								},
+								{
+									"key": "nama_siswa",
+									"value": "Mahendra Dirgantara Ubah",
+									"type": "text"
+								},
+								{
+									"key": "jenis_kelamin",
+									"value": "L",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "Sumatra 22",
+									"type": "text"
+								},
+								{
+									"key": "nama_orangtua",
+									"value": "Ibu Suhandiah",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/siswa/64d9fe024557a7709e073163?_method=PUT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"siswa",
+								"64d9fe024557a7709e073163"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data Siswa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "VBee0MqRaSHLfPZuWH4qbQqFAhHDCFc1I82Jdw37",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:8000/siswa/64d9fef34557a7709e073164"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nilai",
+			"item": [
+				{
+					"name": "Get List Nilai",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/nilai"
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Data Nilai",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-CSRF-TOKEN",
+								"value": "VBee0MqRaSHLfPZuWH4qbQqFAhHDCFc1I82Jdw37",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama_siswa",
+									"value": "Rizal Prabaswara 2",
+									"type": "text"
+								},
+								{
+									"key": "nama_matapelajaran",
+									"value": "Bahasa Indonesia",
+									"type": "text"
+								},
+								{
+									"key": "nilai_latihansoal1",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "nilai_latihansoal2",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "nilai_latihansoal3",
+									"value": "90",
+									"type": "text"
+								},
+								{
+									"key": "nilai_latihansoal4",
+									"value": "55",
+									"type": "text"
+								},
+								{
+									"key": "nilai_ulanganharian1",
+									"value": "75",
+									"type": "text"
+								},
+								{
+									"key": "nilai_ulanganharian2",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "nilai_ulangan_tengah_semester",
+									"value": "75",
+									"type": "text"
+								},
+								{
+									"key": "nilai_ulangan_semester",
+									"value": "75",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8000/nilai"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get token csrf",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/token"
+			},
+			"response": []
+		}
+	]
+}
